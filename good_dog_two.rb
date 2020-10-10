@@ -1,12 +1,24 @@
 class GoodDog
-  attr_accessor :name
+  attr_accessor :name, :height, :weight
 
-  def initialize(name)
-    @name = name
+  def initialize(n, h, w)
+    @name = n
+    @height = h
+    @weight = w
   end
 
   def speak
-    "#{@name} says Arf!"
+    "#{name} says Arf!"
+  end
+  
+  def change_info(n, h, w)
+    self.name = n
+    self.height = h
+    self.weight = w
+  end
+
+  def info 
+    "#{self.name} weights #{self.weight} and is #{self.height} tall"
   end
 end
 
@@ -15,16 +27,13 @@ end
 # Within the constructor i.e. the initialize method we then set the 
 # instance variable @name to name, which results in assigning the string
 # "Sparky" to the @name istance variable
-sparky = GoodDog.new("Sparky") 
+sparky = GoodDog.new('Sparky', '12 inches', '10 lbs') 
 puts sparky.speak
-
-fido = GoodDog.new("Fido")
-puts fido.speak
 
 # Original name was sparky
 puts sparky.name
+puts sparky.info
 
-# using the setting method we can change the name
-sparky.name = "Spartacus"
-# New name should be Spartacus
-puts sparky.name
+sparky.change_info('Spartacus', '24 inches', '45 lbs')
+puts sparky.info
+
