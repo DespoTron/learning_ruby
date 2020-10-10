@@ -4,13 +4,13 @@ class GoodDog
   end
 
   # getting method
-  def get_name
+  def name
     @name
   end
 
   # setter method
-  def set_name=(name)
-    @name = name
+  def name=(n)
+    @name = n
   end
 
   def speak
@@ -30,9 +30,9 @@ fido = GoodDog.new("Fido")
 puts fido.speak
 
 # Original name was sparky
-puts sparky.get_name
+puts sparky.name
 
 # using the setting method we can change the name
-sparky.set_name = "Spartacus"
+sparky.name = "Spartacus"
 # New name should be Spartacus
-puts sparky.get_name
+puts sparky.name
