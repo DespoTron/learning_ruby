@@ -1,6 +1,6 @@
 module Speak
   def speak(sound)
-    puts sound
+    puts "#{sound}"
   end
 end
 
@@ -11,6 +11,14 @@ end
 class HumanBeing
   include Speak
 end
+
+puts "---GooDog ancestors---"
+puts GoodDog.ancestors
+puts ''
+
+puts "---HumanBeing ancestors---"
+puts HumanBeing.ancestors
+puts ''
 
 sparky = GoodDog.new
 sparky.speak("Arf!")
