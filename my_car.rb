@@ -1,8 +1,11 @@
 class  MyCar 
-  def initialize(y, c, m)
-    @year = y
-    @color = c
-    @model = m
+  attr_accessor :color
+  attr_reader :year
+
+  def initialize(year, color, model)
+    @year = year
+    @color = color
+    @model = model
     @current_speed = 0
   end
 
@@ -24,6 +27,11 @@ class  MyCar
     @current_speed = 0
     puts "Let's park this bad boy!"
   end
+
+  def spray_paint(color)
+    self.color = color
+    puts "Your new #{color} paint job looks great!"
+  end
 end
 
 honda = MyCar.new('1990', 'honda', 'black')
@@ -38,3 +46,9 @@ honda.current_speed
 honda.shut_down
 honda.current_speed
     
+
+honda.color = 'White'
+puts honda.color
+puts honda.year 
+
+honda.spray_paint("red")
