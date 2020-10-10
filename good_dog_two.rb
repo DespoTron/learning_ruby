@@ -1,16 +1,8 @@
 class GoodDog
+  attr_accessor :name
+
   def initialize(name)
     @name = name
-  end
-
-  # getting method
-  def name
-    @name
-  end
-
-  # setter method
-  def name=(n)
-    @name = n
   end
 
   def speak
